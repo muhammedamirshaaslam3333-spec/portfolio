@@ -12,7 +12,7 @@ form.addEventListener("submit", function (e) {
     alert("Thank you! Your message has been sent.");
     form.reset();
 });
-const pic = document.querySelector("h1");
+const pic = document.querySelector(".profile-pic");
 
 document.addEventListener("mousemove", (e) => {
     const x = (window.innerWidth / 2 - e.clientX) / 25;
@@ -20,7 +20,4 @@ document.addEventListener("mousemove", (e) => {
 
     pic.style.transform = `translate(${-x}px, ${-y}px)`;
 });
-
-
-
 
