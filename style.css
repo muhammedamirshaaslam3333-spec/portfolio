@@ -11,8 +11,8 @@ body {
 }
 
 header {
-    height: 100vh;
-    background: linear-gradient(to right, #667eea, #764ba2);
+    /* height: 100vh;
+    background: linear-gradient(to right, #667eea, #764ba2); */
     color: white;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ section {
     margin: auto;
 }
 
-h2 {
+h1 {
     margin-bottom: 20px;
     text-align: center;
 }
@@ -77,12 +77,18 @@ footer {
     background: #222;
     color: white;
 }
-.profile-pic {
-    width: 200px;
-    border-radius: 50%;
+h1 {
+    
     position: relative;
     transition: transform 0.1s ease;
 }
-
-
-
+h1:hover {
+    transform: scale(1.05);
+}
+body{
+   padding-top: 40% ;
+      background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    background-image: url("151f2310-16c5-4061-9ff2-1e61b3e9091b.png");
+}
