@@ -83,7 +83,7 @@ h1 {
     transition: transform 0.1s ease;
 }
 h1:hover {
-    transform: scale(100.05);
+    transform: scale(1.05);
 }
 body{
    padding-top: 40% ;
