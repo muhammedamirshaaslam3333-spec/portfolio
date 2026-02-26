@@ -1,23 +1,29 @@
-function scrollToSection() {
-    document.getElementById("projects").scrollIntoView({
-        behavior: "smooth"
-    });
-}
+window.addEventListener("load", () => {
+  const left = document.querySelector(".left-content");
+  left.style.opacity = 0;
+  left.style.transform = "translateY(20px)";
 
-// Optional: simple form submit message
-const form = document.querySelector("form");
-
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Thank you! Your message has been sent.");
-    form.reset();
+  setTimeout(() => {
+    left.style.transition = "1.2s ease";
+    left.style.opacity = 1;
+    left.style.transform = "translateY(0)";
+  }, 200);
 });
-const pic = document.querySelector(".profile-pic");
+// Simple fade-in animation
+const sections = document.querySelectorAll("section");
 
-document.addEventListener("mousemove", (e) => {
-    const x = (window.innerWidth / 2 - e.clientX) / 25;
-    const y = (window.innerHeight / 2 - e.clientY) / 25;
-
-    pic.style.transform = `translate(${-x}px, ${-y}px)`;
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.style.opacity = 1;
+      sec.style.transform = "translateY(0)";
+    }
+  });
 });
 
+sections.forEach(sec => {
+  sec.style.opacity = 0;
+  sec.style.transform = "translateY(40px)";
+  sec.style.transition = "1s ease";
+});
